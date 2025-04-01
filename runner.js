@@ -18,6 +18,15 @@ function jump() {
     }
 }
 
+document.body.onkeyup = function(e) {
+    if (e.key == " " ||
+        e.code == "Space" ||      
+        e.keyCode == 32      
+    ) {
+      jump();
+    }
+  }
+
 var checkDead = setInterval(function(){
     var runnerTop = parseInt(window.getComputedStyle(runner).getPropertyValue("top"));
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
