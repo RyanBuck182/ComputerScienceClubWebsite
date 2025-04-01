@@ -48,29 +48,34 @@ class GameValue {
     }
 }
 
-class GameFlag extends GameValue {
+class GameFlag {
     constructor(initialValue) {
-        super(initialValue);
+        this._gameValue = new GameValue(!!initialValue);
 
         // Events
         this.onEnabled = new GameEvent();
         this.onDisabled = new GameEvent();
+        this.onChanged = new GameEvent();
 
-        // Event Cascade
+        // Event Cascades
+        this._gameValue.onChanged.onEventFired((newVal) => {
+            this.onChanged.fireEvent(newVal);
+        });
+
         this.onChanged.onEventFired((newVal) => {
             if (newVal)
                 this.onEnabled.fireEvent();
             else
-                this.onDisabled.fireEvent();
+                this.onDisabled.fireEvent();            
         });
     }
 
     get isEnabled() {
-        return this.value;
+        return this._gameValue.get();
     }
 
     set isEnabled(newVal) {
-        this.value = !!newVal;
+        this._gameValue.set(!!newVal);
     }
 
     // Enable the flag
@@ -89,26 +94,26 @@ class GameFlag extends GameValue {
     }
 }
 
-class GameUnlock extends GameFlag {
+class GameUnlock {
     constructor() {
-        super(false);
+        this._gameFlag = new GameFlag(false);
         
         // Event
         this.onUnlocked = new GameEvent();
 
         // Event Cascade
-        this.onEnabled.onEventFired(() => {
+        this._gameFlag.onEnabled.onEventFired(() => {
             this.onUnlocked.fireEvent();
         });
     }
 
     get isUnlocked() {
-        return this.isEnabled;
+        return this._gameFlag.isEnabled;
     }
 
     // Unlock the unlock
     unlock() {
-        this.enable();
+        this._gameFlag.enable();
     }
 }
 
