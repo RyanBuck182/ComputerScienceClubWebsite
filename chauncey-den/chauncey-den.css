@@ -1,3 +1,13 @@
 .center {
     text-align: center;
 }
+
+#chauncey-container {
+    display: flex;
+    justify-content: center;
+}
+
+#chauncey {
+    border-radius: 50%;
+    width: 50dvw;
+}
