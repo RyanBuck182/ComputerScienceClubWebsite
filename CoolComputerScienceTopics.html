@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/robot/OneDrive/Desktop/New%20Text%20Document.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cool computer science topics</title>
+    <style>
+        body {
+            height: 2000px; /* To enable scrolling */
+            background-color: rgba(200, 183, 101, 0.815);
+        }
+
+        .hidden-image {
+            opacity: 0;
+            transition: opacity 1s ease; /* Smooth fade-in effect */
+            width: 300px;
+            margin-top: 500px; /* Position image lower down on the page */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cool Computer Science Topics</h1>
+    <nav>
+        <a href="file:///C:/Users/robot/OneDrive/Desktop/index.html">About</a>
+    </nav>
+    <hr>
+
+    <div style="width: 30%; float: left;">
+        <p><strong>Server Stuffs</strong></p>
+        <ul>
+            <li><a href="https://www.plex.tv/">free DIY netflix</a></li>
+            <li><a href="https://spotdownloader.com/">free spotify playlist downloader</a></li>
+            <li><a href="https://thunder.hydr0.org/">another free spotify playlist downloader</a></li>
+
+            <li>Server OS
+                <ul>
+                    <li><a href="https://www.amahi.org/how-it-works">free server software</a></li>
+                    <li><a href="https://casaos.zimaspace.com/">free DIY netflix</a></li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+    
+
+        <p><strong>Free AI tools</strong></p>
+        <ul>
+            <li><a href="https://elevenlabs.io/">both way speech synthisizer</a></li>
+            <li><a href="https://pimeyes.com/en">full web face search engine</a></li>
+            <li><a href="https://deepfakesweb.com/">free deepfake engine</a></li>
+        </ul>
+        <hr>
+    </div>
+
+    <div style="width: 30%; float: left;">
+        <p><strong>definitely LeGal online video resources</strong></p>
+        <ul>
+            <li><a href="https://ww4.123moviesfree.net/">123 Movies</a></li>
+            <li><a href="https://lekuluent.et/">lekuluent</a></li>
+            <li><a href="https://ww4.fmovies.co/home/">Fmovies</a></li>
+            <li><a href="https://sflix.to/home">SFlix</a></li>
+            <li><a href="https://ww.yesmovies.ag/yes.html">YESmovies</a></li>
+        </ul>
+        <hr>
+
+        <p><strong>computer safety</strong></p>
+        <ul>
+            <li><a href="https://protonvpn.com/?srsltid=AfmBOoqM_SglAM5oaEF2fGFgVFVxeQUdlopupRcC9085VfowhNKuDqvO">free vpn</a></li>
+            <li><a href="https://www.avast.com/en-us/lp-ppc-free-antivirus-brand-a1-buy?ppc_code=012&amp;ppc=a&amp;om_sem_cid=hho_sem_sy:~en-us_ava_sch_brn_exc_adw_dtp~&amp;utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=en-us_ava_sch_brn_exc_adw_dtp&amp;gad_source=1&amp;gclid=CjwKCAjw-qi_BhBxEiwAkxvbkLbkbR-hIvNFqom2IvlqKeA02JbJpdv9x5kTURn1Lbk7DifnNw_x6BoCmhoQAvD_BwE&amp;gclsrc=aw.ds#pc">free antivirus (quieter than mcafee)</a></li>
+            <li><a href="https://proton.me/pass">non google password manager/saver</a></li>
+        </ul>
+        <hr>
+    </div>
+
+    <div style="width: 30%; float: left;"></div>
+        <p><strong>other</strong></p>
+        <ul>
+            <li><a href="https://remotedesktop.google.com/access">fast and easy remote desktop</a></li>
+            <li><a href="https://discord.com/developers/docs/reference">open source discord dev portal</a></li>
+            <li><a href="https://ryujinx-emulator.com/knowledge-base/prod-keys">nintendo switch emulator</a></li>
+            <li><a href="https://thebookofshaders.com/">fully open source and free shaders training</a></li>
+            <li><a href="https://huggingface.co/">thousands of free AI models</a></li>
+            <li><a href="https://www.wolframalpha.com/examples/science-and-technology/technological-world/web-and-computer-systems">self training tools</a></li>
+            <li><a href="https://grugbrain.dev/">The Grug Brained Developer</a></li>
+            <li><a href="https://www.wf3d.shop/">non-free 3D models</a></li>
+        </ul>
+        <hr>
+    
+
+    <iframe src="./cool computer science topics_files/saved_resource.html" width="100%" height="600px"></iframe>
+
+    <img src="https://via.placeholder.com/300" alt="Placeholder Image" class="hidden-image visible" id="scrollImage">
+
+    <script>
+        // Create an Intersection Observer
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add 'visible' class to make the image fade in
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing after it's visible
+                }
+            });
+        }, {
+            threshold: 0.5 // Image will be revealed when 50% is in view
+        });
+
+        // Target the image to observe
+        const image = document.getElementById('scrollImage');
+        observer.observe(image);
+    </script>
+
+
+</body></html>

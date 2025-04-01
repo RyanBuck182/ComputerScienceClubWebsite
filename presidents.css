@@ -1,0 +1,98 @@
+/* styles.css */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for terminal look */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #00D000; /* Green border for separation */
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.presidents {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px;  /* Space between the cards */
+    padding: 20px;
+    justify-content: center;  /* Centers the grid container horizontally */
+    align-content: start;  /* Aligns the grid content (cards) from the top */
+    margin: 0 auto;
+}
+
+.president-card {
+    border: 2px solid #00D000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.president-card:hover {
+    transform: translateY(-10px) scale(1.02);  /* Pop out and enlarge */
+    box-shadow: 0 8px 16px rgba(0, 255, 0, 0.3);  /* Enhanced green glow */
+}
+
+.president-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #00D000; /* Green border under image */
+}
+
+.president-card h2 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.president-card p {
+    font-size: 16px;
+    color: #00d000;  /* Green text for the description */
+}
+
+footer {
+    background-color: #000;  /* Black footer background */
+    color: #00d000;  /* Green text in footer */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 2px solid #00d000;  /* Green border for footer */
+}
+
+/* styles.css */
+.home-btn {
+    background-color: #00d000; /* Green button */
+    color: #000; /* Black text */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.home-btn:hover {
+    background-color: #00AA00; /* Darker green on hover */
+}
+
+.back-to-home {
+    margin-top: 20px;  /* Space between button and content above */
+    margin-left: 20px;
+    margin-bottom: -60px;
+}
