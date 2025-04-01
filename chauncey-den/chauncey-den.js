@@ -4,6 +4,7 @@ import { GameManager } from "./game_manager.js";
 let gameManager = new GameManager();
 
 let chaunceyImage = document.getElementById("chauncey");
+let resourcesBox = document.getElementById("resources");
 let chaunceyCounter = document.getElementById("chauncey-counter");
 
 // Run main when the html loads
@@ -12,21 +13,29 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function main() {
-    addListeners();
-};
-
-function addListeners() {
-    // Game manager events
-    gameManager.onEvent('chaunceyChange', onChaunceyChange);
+    // Values
+    gameManager.chaunceyCount.onChanged.onEventFired(onChaunceyChange);
     
-    // DOM events
+    // Unlocks
+    gameManager.unlocks.resources.onUnlocked.onEventFired(onUnlockedResources)
+    gameManager.unlocks.chaunceys.onUnlocked.onEventFired(onUnlockedChaunceys)
+
+    // User Interaction
     chaunceyImage.addEventListener("click", onChaunceyClick);
 };
 
 function onChaunceyClick() {
-    gameManager.chaunceyCount += 1;
+    gameManager.chaunceyCount.value += 1;
 }
 
 function onChaunceyChange(newChaunceyCount) {
     chaunceyCounter.textContent = "Chaunceys: " + newChaunceyCount;
+}
+
+function onUnlockedResources() {
+    resourcesBox.hidden = false;
+}
+
+function onUnlockedChaunceys() {
+    chaunceyCounter.hidden = false;
 }
