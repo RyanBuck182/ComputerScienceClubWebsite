@@ -27,6 +27,14 @@
     user-select: none;
 }
 
+#chauncey:hover {
+    filter: brightness(110%);
+}
+
+#chauncey:active {
+    filter: brightness(100%)
+}
+
 h1 {
     margin: 0;
     padding-inline: 1dvh;
