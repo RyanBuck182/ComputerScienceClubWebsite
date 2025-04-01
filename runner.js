@@ -37,3 +37,8 @@ var checkDead = setInterval(function(){
         block.style.display = "none";
     }
 }, 10);
+
+function reloadPage()
+{
+    location.reload();
+}
