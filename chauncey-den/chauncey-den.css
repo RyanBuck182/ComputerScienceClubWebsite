@@ -1,5 +1,13 @@
-.center {
-    text-align: center;
+/* Default layout is for tablet, but works fine on desktop. */
+/* First media query is for phone. */
+/* A second one is planned for desktops. */
+
+#page-container {
+    margin-block: 0;
+    margin-inline: auto;
+    max-width: 60dvh;
+    background-color: #202020;
+    min-height: 100dvh;
 }
 
 #chauncey-container {
@@ -9,5 +17,63 @@
 
 #chauncey {
     border-radius: 50%;
-    width: 50dvw;
+    width: 50dvh;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h1 {
+    margin: 0;
+    padding-inline: 1dvh;
+    padding-bottom: 1dvh;
+    font-size: 4dvh;
+}
+
+h2 {
+    margin: 0;
+    padding-inline: 1dvh;
+    padding-bottom: 1dvh;
+    font-size: 3.3dvh;
+}
+
+p {
+    margin: 0;
+    padding-inline: 3dvh;
+    padding-bottom: 0.75dvh;
+    font-size: 2.2dvh;
+}
+
+/* Phone */
+@media (max-width: 600px) {
+    #page-container {
+        margin-inline: 0;
+        max-width: 100dvw;
+    }
+
+    #chauncey {
+        width: 70dvw;
+    }
+    
+    h1 {
+        padding-inline: 1.75dvw;
+        padding-bottom: 1.5dvw;
+        font-size: 6dvw;
+    }
+
+    h2 {
+        padding-inline: 1.75dvw;
+        padding-bottom: 1.5dvw;
+        font-size: 5dvw;
+    }
+
+    p {
+        padding-inline: 4dvw;
+        padding-bottom: 1dvw;
+        font-size: 4dvw;
+    }
 }
