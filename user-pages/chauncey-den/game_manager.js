@@ -94,7 +94,7 @@ class GameFlag {
     }
 }
 
-class GameUnlock {
+class GameUnlockable {
     constructor() {
         this._gameFlag = new GameFlag(false);
         
@@ -124,9 +124,9 @@ export class GameManager {
 
         // Unlocks
         this.unlocks = {};
-        this.unlocks.firstClick = new GameUnlock();
-        this.unlocks.resources = new GameUnlock();
-        this.unlocks.chaunceys = new GameUnlock();
+        this.unlocks.firstClick = new GameUnlockable();
+        this.unlocks.resources = new GameUnlockable();
+        this.unlocks.chaunceys = new GameUnlockable();
 
         // Unlock resources and chaunceys on first click 
         this.unlocks.firstClick.onUnlocked.onEventFired(() => {
