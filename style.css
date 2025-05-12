@@ -31,3 +31,15 @@ left: 105%;
 .tooltip:hover .tooltiptext {
 visibility: visible;
 }
+
+a{
+    font-size: larger; 
+    color: #00d000;
+    text-decoration:underline;
+}
+
+a:hover{
+    font-size: x-large;
+    color:#1F4F82;
+    text-decoration:underline;
+}
