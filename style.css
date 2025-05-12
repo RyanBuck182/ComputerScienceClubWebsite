@@ -33,12 +33,13 @@ visibility: visible;
 }
 
 a{
-    font-size: larger;
-    color:#1F4F82;
-    text-decoration:none;
+    font-size: larger; 
+    color: #00d000;
+    text-decoration:underline;
 }
 
 a:hover{
-    color:#00d000;
+    font-size: x-large;
+    color:#1F4F82;
     text-decoration:underline;
 }
