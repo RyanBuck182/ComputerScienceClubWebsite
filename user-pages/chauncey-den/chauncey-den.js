@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function main() {
     // Values
-    gameManager.chaunceyCount.onChanged.onEventFired(onChaunceyChange);
+    gameManager.chaunceyCount.onChanged.onEachEventFired(onChaunceyChange);
     
     // Unlocks
-    gameManager.unlocks.resources.onUnlocked.onEventFired(onUnlockedResources)
-    gameManager.unlocks.chaunceys.onUnlocked.onEventFired(onUnlockedChaunceys)
+    gameManager.unlocks.resources.onUnlocked.onNextEventFired(onUnlockedResources)
+    gameManager.unlocks.chaunceys.onUnlocked.onNextEventFired(onUnlockedChaunceys)
 
     // User Interaction
     chaunceyImage.addEventListener("click", onChaunceyClick);
