@@ -4,8 +4,14 @@ import { GameManager } from "../backend/game_manager.js";
 let gameManager = new GameManager();
 
 let chaunceyImage = document.getElementById("chauncey");
+
+// Resources
 let resourcesBox = document.getElementById("resources");
 let chaunceyCounter = document.getElementById("chauncey-counter");
+
+// Upgrades
+let upgradesBox = document.getElementById("upgrades");
+let handlerCounter = document.getElementById("handler-counter");
 
 // Run main when the html loads
 document.addEventListener('DOMContentLoaded', function() {
@@ -16,16 +22,20 @@ function main() {
     // Values
     gameManager.chaunceyCount.onChanged.onEachEventFired(onChaunceyChange);
     
-    // Unlocks
-    gameManager.unlocks.resources.onUnlocked.onNextEventFired(onUnlockedResources)
-    gameManager.unlocks.chaunceys.onUnlocked.onNextEventFired(onUnlockedChaunceys)
+    // Resource Unlocks
+    gameManager.unlocks.resources.onUnlocked.onNextEventFired(onUnlockedResources);
+    gameManager.unlocks.chaunceys.onUnlocked.onNextEventFired(onUnlockedChaunceys);
+
+    // Upgrade Unlocks
+    gameManager.unlocks.upgrades.onUnlocked.onNextEventFired(onUnlockedUpgrades);
+    gameManager.unlocks.handlers.onUnlocked.onNextEventFired(onUnlockedHandlers);
 
     // User Interaction
     chaunceyImage.addEventListener("click", onChaunceyClick);
 };
 
 function onChaunceyClick() {
-    gameManager.chaunceyCount.value += 1;
+    gameManager.clickCount.value += 1;
 }
 
 function onChaunceyChange(newChaunceyCount) {
@@ -38,4 +48,12 @@ function onUnlockedResources() {
 
 function onUnlockedChaunceys() {
     chaunceyCounter.hidden = false;
+}
+
+function onUnlockedUpgrades() {
+    upgradesBox.hidden = false;
+}
+
+function onUnlockedHandlers() {
+    handlerCounter.hidden = false;
 }
