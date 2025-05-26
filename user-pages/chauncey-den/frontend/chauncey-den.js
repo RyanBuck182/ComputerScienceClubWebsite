@@ -1,4 +1,4 @@
-import { GameManager } from "./game_manager.js";
+import { GameManager } from "../backend/game_manager.js";
 
 // Global vars
 let gameManager = new GameManager();

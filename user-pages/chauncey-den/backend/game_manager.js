@@ -1,4 +1,4 @@
-import { GameValue, GameUnlockable } from "./game_engine/types.js";
+import { GameValue, GameUnlockable } from "../game_engine/types.js";
 
 export class GameManager {
     constructor() {
