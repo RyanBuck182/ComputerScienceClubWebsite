@@ -32,13 +32,13 @@ export class GameEvent {
 
     // Remove a recurring callback
     removeRecurringCallback(callback) {
-        index = this._callbacks.indexOf(callback);
+        let index = this._callbacks.indexOf(callback);
         this._callbacks.splice(index, 1);
     }
 
     // Remove a temporary callback
     removeTempCallback(callback) {
-        index = this._tempCallbacks.indexOf(callback);
+        let index = this._tempCallbacks.indexOf(callback);
         this._tempCallbacks.splice(index, 1);
     }
 
