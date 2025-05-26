@@ -24,7 +24,25 @@ export class GameEvent {
         this._tempCallbacks.push(callback);
     }
 
-    // Clear callbacks
+    // Remove a callback
+    removeCallback(callback) {
+        this.removeRecurringCallback(callback);
+        this.removeTempCallback(callback);
+    }
+
+    // Remove a recurring callback
+    removeRecurringCallback(callback) {
+        index = this._callbacks.indexOf(callback);
+        this._callbacks.splice(index, 1);
+    }
+
+    // Remove a temporary callback
+    removeTempCallback(callback) {
+        index = this._tempCallbacks.indexOf(callback);
+        this._tempCallbacks.splice(index, 1);
+    }
+
+    // Clear all callbacks
     clearAllCallbacks() {
         this._callbacks = [];
         this._tempCallbacks = [];
