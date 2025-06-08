@@ -11,7 +11,7 @@ let chaunceyCounter = document.getElementById("chauncey-counter");
 
 // Upgrades
 let upgradesBox = document.getElementById("upgrades");
-let handlerCounter = document.getElementById("handler-counter");
+let handler = document.getElementById("handler");
 
 // Run main when the html loads
 document.addEventListener('DOMContentLoaded', function() {
@@ -55,5 +55,5 @@ function onUnlockedUpgrades() {
 }
 
 function onUnlockedHandlers() {
-    handlerCounter.hidden = false;
+    handler.hidden = false;
 }

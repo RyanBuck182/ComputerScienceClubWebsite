@@ -2,6 +2,10 @@
 /* First media query is for phone. */
 /* A second one is planned for desktops. */
 
+:root {
+    color: var(--primary-text)
+}
+
 #page-container {
     margin-block: 0;
     margin-inline: auto;
@@ -51,9 +55,22 @@ h2 {
 
 p {
     margin: 0;
-    padding-inline: 3dvh;
-    padding-bottom: 0.75dvh;
+    margin-inline: 3dvh;
+    margin-bottom: 0.75dvh;
     font-size: 2.2dvh;
+}
+
+span {
+    font-size: 2.2dvh;
+}
+
+button {
+    margin: 0;
+    margin-left: 3dvh;
+    margin-bottom: 0.75dvh;
+    font-size: 2.1dvh;
+    color: var(--primary-text);
+    background-color: var(--primary-bg);
 }
 
 /* Phone */
@@ -80,8 +97,18 @@ p {
     }
 
     p {
-        padding-inline: 4dvw;
-        padding-bottom: 1dvw;
+        margin-inline: 4dvw;
+        margin-bottom: 1dvw;
         font-size: 4dvw;
+    }
+
+    span {
+        font-size: 4dvw;
+    }
+
+    button {
+        margin-left: 4dvw;
+        margin-bottom: 1dvw;
+        font-size: 3.8dvw;
     }
 }
