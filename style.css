@@ -1,7 +1,9 @@
 :root {
+    --primary-text: #00d000;
+    --primary-bg: black;
     font-family: 'Consolas', 'Cascadia Code', monospace;
-    color: #00d000;
-    background: black;
+    color: var(--primary-text);
+    background-color: var(--primary-bg);
 }
 
 .tooltip {
