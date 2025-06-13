@@ -3,7 +3,7 @@ import { GameManager } from "../backend/game_manager.js";
 // Global vars
 let gameManager = new GameManager();
 
-let chaunceyImage = document.getElementById("chauncey");
+let chaunceyButton = document.getElementById("chauncey");
 
 // Resources
 let resourcesBox = document.getElementById("resources");
@@ -34,7 +34,7 @@ function main() {
     gameManager.unlocks.handlers.onUnlocked.onNextEventFired(onUnlockedHandlers);
 
     // User Interaction
-    chaunceyImage.addEventListener("click", onChaunceyClick);
+    chaunceyButton.addEventListener("click", onChaunceyClick);
     handlerButton.addEventListener("click", onHandlerClick);
 };
 
